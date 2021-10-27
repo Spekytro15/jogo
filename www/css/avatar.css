@@ -1,0 +1,14 @@
+[class*="ghost"] {
+    position: absolute;
+    height: 200px;
+    margin: 25px;
+    position: relative;
+    width: 200px;
+}
+
+.head {
+    background: $Blinky;
+    height: 100px;
+    position: relative;
+    width: 152px;
+}

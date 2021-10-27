@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html onclick="pular()">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <title>Hello World</title>
+</head>
+
+<body>
+
+    <center>
+        <div class="estrela-vitoria" style="display: none;"></div>
+    </center>
+    <div id="game">
+        <div id="pacman" class="pacman ">
+            <div class="pacman__eye"></div>
+            <div class="pacman__mouth"></div>
+
+        </div>
+
+        <div id="quadrado"></div>
+    </div>
+    <center>
+        <div class="modal-t" style="display: none;">
+            <p style="color: white;">Responta a seguinte equação</p>
+            <b><p id="equacao"></p></b>
+
+            <input id="txt" style="background-color: white;" type="number" placeholder="resposta">
+            <button id="veri_eq" class="btn"><i class="material-icons">check</i></button>
+        </div>
+    </center>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/www/js/jquery.js"></script>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

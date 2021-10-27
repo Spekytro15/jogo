@@ -1,0 +1,146 @@
+body {
+    background-color: rgb(46, 64, 80);
+    padding: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    padding: 5px;
+    background-color: rgb(79, 79, 119);
+    overflow: hidden;
+    width: 100%;
+    height: 90vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 15px;
+}
+
+.pacman {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #eeff02;
+    position: relative;
+    top: 72vh
+}
+
+.pacman__eye {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: 10px;
+    right: 20px;
+    background: #00060a;
+}
+
+.pacman__mouth {
+    background: rgb(79, 79, 119);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-name: eat;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+.pacman__food {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(66, 61, 99);
+    border-radius: 50%;
+    top: 40%;
+    left: 120px;
+    animation-name: food;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes eat {
+    0% {
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+    25% {
+        clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+    }
+    50% {
+        clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+    }
+    75% {
+        clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+    }
+    100% {
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+}
+
+.animar {
+    animation: personagem 1s infinite;
+}
+
+@keyframes personagem {
+    0% {
+        top: 72vh;
+    }
+    33% {
+        top: 0vh;
+    }
+    66% {
+        top: 45vh;
+    }
+    99% {
+        top: 60vh;
+    }
+}
+
+#quadrado {
+    background-image: url(../img/gosth.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 20%;
+    height: 20%;
+    top: 62vh;
+    left: 480px;
+    animation: quadrado 1s infinite linear;
+}
+
+@keyframes quadrado {
+    0% {
+        left: 480px;
+    }
+    100% {
+        left: -40px;
+    }
+}
+
+
+/* modal */
+
+.modal-t {
+    position: absolute;
+    background-color: rgb(247, 235, 76);
+    top: 30vh;
+    left: 10vh;
+    width: 60%;
+    height: 20%;
+    z-index: 99;
+    border-radius: 10px 1px 10px 10px;
+    box-shadow: 5px 5px 15px rgb(247, 181, 60);
+}
+
+.estrela-vitoria {
+    left: 14vh;
+    z-index: 9999999;
+    width: 50%;
+    height: 30vh;
+    background-image: url(../img/estrela_vitoria.gif);
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
