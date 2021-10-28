@@ -107,10 +107,10 @@ body {
     height: 20%;
     top: 62vh;
     left: 480px;
-    animation: quadrado 1s infinite linear;
+    animation: q 2s infinite linear;
 }
 
-@keyframes quadrado {
+@keyframes q {
     0% {
         left: 480px;
     }
