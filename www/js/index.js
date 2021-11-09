@@ -1,5 +1,21 @@
 let personagem = document.querySelector('#pacman')
 let quadrado = document.querySelector('#quadrado')
+let pontos = 0;
+let erros = 0;
+    
+$("#play").click( function () {
+ let name =  $("#name").val();
+
+if(name == ""){ 
+    M.toast({ html: 'Digite um nome' })
+}else{
+    $("#name_get").html("jogador: "+name)
+        $("#tela-1").hide()
+        $("#tela-2").show()
+}
+})
+
+
 
 function pular() {
     if (personagem.classList != 'animar') {
@@ -8,7 +24,7 @@ function pular() {
 
     setTimeout(function() {
         personagem.classList.remove('animar')
-    }, 500)
+    }, 700)
 }
 
 var testarColisao = setInterval(function() {
@@ -19,16 +35,18 @@ var testarColisao = setInterval(function() {
     var EsquerdaQuadrado = parseInt(
         window.getComputedStyle(quadrado).getPropertyValue('left')
     )
+   
+    console.log(topoPersonagem)
+    if (EsquerdaQuadrado < 50 && EsquerdaQuadrado > 0 &&  topoPersonagem >= 285  ){
+      
 
+ 
+    quadrado.style.display = 'none'
+    personagem.style.display = 'none'
+     
+     console.log("relo")
 
-    if (EsquerdaQuadrado < 20 && EsquerdaQuadrado > 0 && topoPersonagem >= 62) {
-
-
-      //  quadrado.style.animation = 'none'
-        quadrado.style.display = 'none'
-        personagem.style.display = 'none'
-
-        equa();
+     equa();
     }
 
 
@@ -44,11 +62,13 @@ function geradornumero(min, max) { // min and max included
 
 
 function equa() {
+    
+    
     //primeira equaçãovar teste = 0
     var controle_eq = randomIntFromInterval(1, 4)
 
-    var gerador1 = geradornumero(1, 500);
-    var gerador2 = geradornumero(1, 500);
+    var gerador1 = geradornumero(1, 20);
+    var gerador2 = geradornumero(1, 20);
 
    if (controle_eq == 1) {
         $('#equacao').html("")
@@ -66,8 +86,11 @@ function equa() {
                 personagem.style.display = 'block'
                 $(".estrela-vitoria").fadeIn("slow")
 
-
+                pontos = pontos + 1;
+                $("#ponto_get").html("Pontos: "+pontos)
             } else {
+                erros = erros + 1;
+                $("#erros").html("Erros: "+erros)
                 M.toast({ html: 'Resposta incorreta' })
             }
             console.log(equa)
@@ -79,8 +102,8 @@ function equa() {
 
         $(".modal-t").show();
 
-        var equa = gerador1 + gerador2;
-        $('#equacao').append(gerador1 + "+" + gerador2)
+        var equa = gerador1 - gerador2;
+        $('#equacao').append(gerador1 + "-" + gerador2)
 
         $("#veri_eq").click(function() {
             var txt = $("#txt").val();
@@ -91,9 +114,12 @@ function equa() {
                
                 personagem.style.display = 'block'
                 $(".estrela-vitoria").fadeIn("slow")
-
+ pontos = pontos + 1;
+                 $("#ponto_get").html("Pontos: "+pontos)
 
             } else {
+                erros = erros + 1;
+                $("#erros").html("Erros: "+erros)
                 M.toast({ html: 'Resposta incorreta' })
             }
         })
@@ -118,8 +144,11 @@ function equa() {
                 personagem.style.display = 'block'
                 $(".estrela-vitoria").fadeIn("slow")
 
-
+ pontos = pontos + 1;
+                 $("#ponto_get").html("Pontos: "+pontos)
             } else {
+                erros = erros + 1;
+                $("#erros").html("Erros: "+erros)
                 M.toast({ html: 'Resposta incorreta' })
             }
         })
@@ -131,8 +160,8 @@ function equa() {
 
         $(".modal-t").show();
 
-        var equa = gerador1 + gerador2;
-        $('#equacao').append(gerador1 + "+" + gerador2)
+        var equa = gerador1 * gerador2;
+        $('#equacao').append(gerador1 + "X" + gerador2)
 
         $("#veri_eq").click(function() {
             var txt = $("#txt").val();
@@ -144,12 +173,17 @@ function equa() {
                 personagem.style.display = 'block'
                 $(".estrela-vitoria").fadeIn("slow")
 
-
+pontos = pontos + 1;
+                $("#ponto_get").html("Pontos: "+pontos)
             } else {
+                erros = erros + 1;
+                $("#erros").html("Erros: "+erros)
                 M.toast({ html: 'Resposta incorreta' })
             }
         })
         console.log(equa)
         console.log(" EQ - 1")
     }
+
+    
 }

@@ -1,83 +1,39 @@
-body {
-    background-color: rgb(46, 64, 80);
-    padding: 25px;
+body{
+    background-color: #252231;
+    overflow:none; 
 }
-
 * {
     margin: 0;
     padding: 0;
 }
+/* tela 1*/
+#tela-1{
+    margin-top:45vh;
+    padding: 5px;
+}
+
 
 #game {
-    padding: 5px;
-    background-color: rgb(79, 79, 119);
-    overflow: hidden;
-    width: 100%;
-    height: 90vh;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 15px;
+    
+    background-image:linear-gradient( rgb(20, 189, 20) , rgb(43, 43, 59));
+    width: 99%;
+    height: 80vh;
+    position: relative;
+    
 }
 
 .pacman {
+    position: absolute;
     width: 70px;
     height: 70px;
-    border-radius: 50%;
-    background: #eeff02;
-    position: relative;
-    top: 72vh
+    background-image: url(../img/pikatchu.gif);
+    top: 67vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 99999;
+    
 }
 
-.pacman__eye {
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    top: 10px;
-    right: 20px;
-    background: #00060a;
-}
-
-.pacman__mouth {
-    background: rgb(79, 79, 119);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    animation-name: eat;
-    animation-duration: 0.7s;
-    animation-iteration-count: infinite;
-}
-
-.pacman__food {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: rgb(66, 61, 99);
-    border-radius: 50%;
-    top: 40%;
-    left: 120px;
-    animation-name: food;
-    animation-duration: 0.7s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes eat {
-    0% {
-        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
-    }
-    25% {
-        clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
-    }
-    50% {
-        clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
-    }
-    75% {
-        clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
-    }
-    100% {
-        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
-    }
-}
 
 .animar {
     animation: personagem 1s infinite;
@@ -85,29 +41,30 @@ body {
 
 @keyframes personagem {
     0% {
-        top: 72vh;
+        top: 67vh;
     }
     33% {
-        top: 0vh;
+        top: 35vh;
     }
     66% {
         top: 45vh;
     }
     99% {
-        top: 60vh;
+        top: 50vh;
     }
 }
 
 #quadrado {
-    background-image: url(../img/gosth.gif);
+    background-image: url(../img/paissagem/cortada.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    position: relative;
-    width: 20%;
-    height: 20%;
-    top: 62vh;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 67vh;
     left: 480px;
     animation: q 2s infinite linear;
+    z-index:99991;
 }
 
 @keyframes q {
@@ -119,28 +76,77 @@ body {
     }
 }
 
+#cenario {
+    background-image: url(../img/paissagem/arvore.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    top: 42vh;
+    left: 480px;
+    animation: q 5s infinite linear;
+}
+
+@keyframes cenario {
+    0% {
+        left: 480px;
+    }
+    100% {
+        left: -1px;
+    }
+}
+
 
 /* modal */
 
 .modal-t {
+    padding: 10px;
     position: absolute;
-    background-color: rgb(247, 235, 76);
+    color: white;
+    background-color: rgb(22, 22, 31);
     top: 30vh;
     left: 10vh;
     width: 60%;
-    height: 20%;
+    height: 25%;
     z-index: 99;
-    border-radius: 10px 1px 10px 10px;
-    box-shadow: 5px 5px 15px rgb(247, 181, 60);
+    border-radius:10px
+   
+  
 }
-
-.estrela-vitoria {
-    left: 14vh;
-    z-index: 9999999;
-    width: 50%;
-    height: 30vh;
-    background-image: url(../img/estrela_vitoria.gif);
+.ceu{
+    width: 100%;
+    height: 43vh;
+    background-color: rgb(22, 32, 53);
     position: absolute;
+    animation: ceu 120s infinite;
+}
+@keyframes ceu {
+    0% {
+    background-color: rgb(49, 193, 230);
+       
+    }
+    33% {
+    background-color: rgb(71, 134, 150);
+       
+    }
+    66% {
+        background-color: rgb(57, 78, 83);
+    }
+    99% {
+        background-color: rgb(33, 47, 78);
+    }
+}
+.nuvem{
+    width: 100%;
+    background-image: url(../img/nuvem.gif);
+    height: 30vh;
     background-size: 100%;
-    background-repeat: no-repeat;
+}
+.terra{
+    position:absolute ;
+    background-color: rgb(109, 97, 81);
+    width: 100%; 
+    height: 15vh;
+    top:67vh
 }

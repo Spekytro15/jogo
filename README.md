@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="JobsCalc" title="JobsCalc" src="https://i.imgur.com/Veqm7Gh.png" width="220px" />
+  <img alt="" title="JobsCalc" src="../www/img/pikatchu.gif" width="220px" />
 </h1>
 
 <p align="center">
@@ -31,11 +31,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - codova
 
 ## 💻 Projeto
- Um jogo para android, inspirado no pacmen porem cada erro do jogador, tera que resolver contas matematicas variadas. 💰
+ Um jogo para android, inspirado no jogo do google ,porem cada erro do jogador, tera que resolver contas matematicas variadas. 💰
 
-## 🔖 Layout
-
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/s4fytPFbDiSkv4GPSfKaLE/Jobs-Planning). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
