@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="pacmanCal" title="JobsCalc" src="https://img2.gratispng.com/20180401/hcq/kisspng-baby-pac-man-pac-man-world-2-professor-pac-man-ms-pacman-5ac0c562391f60.595311561522582882234.jpg" width="220px" />
+  <img alt="pacmanCal" title="JobsCalc" src="../www/img/pikatchu.gif" width="220px" />
 </h1>
 
 <p align="center">
@@ -30,9 +30,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 -codova
 
-## 💻 Projeto
-
-Um jogo para android, inspirado no pacmen porem cada erro do jogador, tera que resolver contas matematicas variadas. 💰
 
 ## 🔖 Layout
 
