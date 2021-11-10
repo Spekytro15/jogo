@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="pacmanCal" title="JobsCalc" src="../www/img/pikatchu.gif" width="220px" />
+  <img alt="pacmanCal" title="JobsCalc" src="https://c.tenor.com/0WkmuOC_W00AAAAi/waving-pikachu.gif" width="220px" />
 </h1>
 
 <p align="center">
@@ -29,11 +29,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - JavaScript
 -codova
-
-
-## 🔖 Layout
-
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/s4fytPFbDiSkv4GPSfKaLE/Jobs-Planning). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
