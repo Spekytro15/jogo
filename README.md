@@ -1,11 +1,10 @@
 <h1 align="center">
-  <img alt="" title="JobsCalc" src="../www/img/pikatchu.gif" width="220px" />
+  <img alt="pacmanCal" title="JobsCalc" src="https://c.tenor.com/0WkmuOC_W00AAAAi/waving-pikachu.gif" width="220px" />
 </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -28,11 +27,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML
 - CSS
 - JavaScript
-- codova
-
-## 💻 Projeto
- Um jogo para android, inspirado no jogo do google ,porem cada erro do jogador, tera que resolver contas matematicas variadas. 💰
-
+-codova
 
 ## :memo: Licença
 
